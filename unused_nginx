@@ -1,0 +1,10 @@
+#don't use this, launch nginx using nginx.conf instead as socket is not created to connect it to
+server {
+    listen 80;
+    server_name tracpro.org;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/twilio/telephony/telephony.sock;
+    }
+}
