@@ -3,6 +3,10 @@ import twilio.twiml
 
 application = Flask(__name__)
 
+@application.route("/")
+def start():
+    return 'flaskin like a bawss'
+
 @application.route("/twilio", methods=['GET', 'POST'])
 def hello_monkey():
     resp = twilio.twiml.Response()
@@ -30,4 +34,4 @@ def hello():
 
 if __name__ == "__main__":
     #application.run(debug=False, host='0.0.0.0')
-    application.run(debug=False, host='127.0.0.1:8000')
+    application.run(debug=False)
