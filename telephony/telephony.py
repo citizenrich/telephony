@@ -1,14 +1,13 @@
 from flask import Flask, request, redirect
 import twilio.twiml
-
 application = Flask(__name__)
 
 @application.route("/")
-def start():
-    return 'flaskin like a bawss'
+def hello():
+    return "<h1 style='color:blue'>flaskin like a baw$$</h1>"
 
 @application.route("/twilio", methods=['GET', 'POST'])
-def hello_monkey():
+def twilio():
     resp = twilio.twiml.Response()
     resp.reject(reason="busy")
     return str(resp)
@@ -29,9 +28,10 @@ Welcome to You Report! Please tell us what district you live in.
 """
 
 @application.route("/nexmo")
-def hello():
+def nexmo():
     return vxml_xml2
 
 if __name__ == "__main__":
+    application.run(host='0.0.0.0')
     #application.run(debug=False, host='0.0.0.0')
-    application.run(debug=False)
+    #application.run(debug=False)
