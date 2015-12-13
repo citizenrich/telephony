@@ -12,8 +12,6 @@ def twilio():
     resp.reject(reason="busy")
     return str(resp)
 
-vxml_xml = '<?xml version="1.0" encoding="UTF-8"?><vxml version="2.1"><form><block><prompt xml:lang="en-in-female"><break time="2s"/>Welcome to You Report! Please tell us what district you live in.</prompt></block></form></vxml>'
-
 vxml_xml2 = """
 <?xml version="1.0" encoding="UTF-8"?><vxml version="2.1">
 <form>
