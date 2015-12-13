@@ -31,6 +31,6 @@ def hello():
 #     return vxml_xml2
 
 if __name__ == "__main__":
-    application.run(host='0.0.0.0')
+    application.run(host='127.0.0.1', port='8000')
     #application.run(debug=False, host='0.0.0.0')
     #application.run(debug=False)
