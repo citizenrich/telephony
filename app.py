@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect
-import twilio.twiml
+from twilio import twiml
 application = Flask(__name__)
 
 @application.route("/")
@@ -8,9 +8,10 @@ def hello():
 
 @application.route("/twilio", methods=['GET', 'POST'])
 def twilio():
-    resp = twilio.twiml.Response()
-    resp.reject(reason="busy")
-    return str(resp)
+    resp = twiml.Response()
+    resp.say("Welcome to twilio!")
+    print(str(resp))
+
 
 vxml_xml2 = """
 <?xml version="1.0" encoding="UTF-8"?><vxml version="2.1">
