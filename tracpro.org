@@ -1,8 +1,0 @@
-$ORIGIN tracpro.org.
-$TTL 1800
-tracpro.org. IN SOA ns1.digitalocean.com. hostmaster.tracpro.org. 1437043619 10800 3600 604800 1800
-tracpro.org. 1800 IN NS ns1.digitalocean.com.
-tracpro.org. 1800 IN NS ns2.digitalocean.com.
-tracpro.org. 1800 IN NS ns3.digitalocean.com.
-tracpro.org. 1800 IN A 178.62.0.76
-www.tracpro.org. 1800 IN CNAME tracpro.org.
